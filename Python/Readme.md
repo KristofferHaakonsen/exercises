@@ -1,1 +1,1 @@
-# This folder contains exercises in python
+# Python exercise
