@@ -1,5 +1,5 @@
 # Haskell exercises
-This folder contains 5 exercises in Haskell, which I did during my course in Haskell.
+This folder contains 6 exercises in Haskell, which I did during my course in Haskell.
 <br>Each exercise has its own description and tests.
 
 ## Testing an exercise
