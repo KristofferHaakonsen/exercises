@@ -3,7 +3,7 @@ This exercise consists of ten task and a test.
 
 
 ### Task 1:
-#### Below are three type signatures. Can you implement them? 
+#### Below are three type signatures. Can you implement them all? 
 
 
 ```haskell
@@ -133,7 +133,7 @@ isPerfSq = undefined
 This ties all the functions together to check if a number is a perfect square. Experiment with the threshold to find an accurate solution and choose a guess, either by defining it in terms of x or by hardcoding a value.
 
 ##### Tweaking your solution
-Below is a function _accuracy_, which tests _isPerfSqr_ against an infinite list of perfect squares. It generates an infinite list
+Below is a function called _accuracy_, which tests _isPerfSqr_ against an infinite list of perfect squares. It generates an infinite list
 of all numbers _isPerfSq_ claims are perfect squares, and filters out numbers where _isPerfSqr_ returns False. If _accuracy 200_ returns True, that means 5 that _isPerfSqr_ has correctly identified the first 200 perfect squares (and correctly rejected the numbers in between). This function is meant to aid you in choosing a satisfactory threshold and guess.
 
 ```Haskell
