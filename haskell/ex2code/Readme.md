@@ -50,6 +50,7 @@ The output of safeHeadList is either empty or a singleton and thus using a list 
 ```Haskell
 data Maybe a = Some a | None deriving (Eq, Show)
 ```
+Representing failure using None.
 
 <br>
 
