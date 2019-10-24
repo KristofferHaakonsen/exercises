@@ -18,7 +18,7 @@ public class BowlingGame {
         //Create a new BowlingScorerer
         BowlingScorer scorer = new BowlingScorer();
 
-        //Test and print
+        //Test and print the different results
         System.out.println("Score for zero's: " + scorer.calculateScore(zeroRolls));
         System.out.println("Score for single one: " + scorer.calculateScore(singleOneRolls));
         System.out.println("Score for one's: " + scorer.calculateScore(oneRolls));
