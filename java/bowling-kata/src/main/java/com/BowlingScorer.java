@@ -11,13 +11,36 @@ public class BowlingScorer {
      * @return the score for the sequence of rolls
      */
     public int calculateScore(int[] result){
+        //Keeps the accumulated score
+        int score = 0;
 
-        return 0;
+        //Indicates which roll we are evaluating
+        int currentRoll = 0;
+
+        //Iterate over the frames
+        for(int i = 0; i < 10; i++){
+            //Check if the frame is a strike
+            if(isStrike(result[currentRoll])){
+               score += 10 + result[currentRoll+1] + result[currentRoll+2];
+               currentRoll++;
+            }
+            //Check if the frame is a strike
+            else if (isSpare(result[currentRoll], result[currentRoll+1])){
+                score += 10 + result[currentRoll+2];
+                currentRoll = currentRoll + 2;
+            }
+            //It is a normal frame
+            else{
+                score += result[currentRoll] + result[currentRoll+1];
+                currentRoll = currentRoll + 2;
+            }
+        }
+        return score;
     }
 
 
     /**
-     * This method checks if two throws is a spare
+     * This method checks if two rolls is a spare
      * @param roll1 The first roll of a frame
      * @param roll2 The second roll of a frame
      * @return true if the rolls are a spare
@@ -32,7 +55,7 @@ public class BowlingScorer {
     }
 
     /**
-     * This method checks if a throw is a strike
+     * This method checks if a roll is a strike
      * @param roll1 The first roll of a frame
      * @return true if the roll is a strike
      */
