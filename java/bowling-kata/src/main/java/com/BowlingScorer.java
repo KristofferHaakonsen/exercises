@@ -46,12 +46,7 @@ public class BowlingScorer {
      * @return true if the rolls are a spare
      */
     private boolean isSpare(int roll1, int roll2){
-        if(( roll1 +  roll2) == 10){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return( (roll1 +  roll2) == 10);
     }
 
     /**
@@ -59,12 +54,7 @@ public class BowlingScorer {
      * @param roll1 The first roll of a frame
      * @return true if the roll is a strike
      */
-    private boolean isStrike(int roll1){
-        if(roll1 == 10){
-            return true;
-        }
-        else{
-            return false;
-        }
+    private boolean isStrike(int roll1) {
+        return (roll1 == 10);
     }
 }
