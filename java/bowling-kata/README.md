@@ -13,7 +13,21 @@ This challenge seems more like a single method than a program. I have therefor i
 
 A single method is not much of a program, so I created the class __BowlingGame__. This class stores the sequence of rolls for one line of American ten-pin bowling, which can be filled by using _rollOnce_. The method _getScore_ calls the method _calculateScore_ from __BowlingScorer__. The class __BowlingGame__ can easily be extended if that is desired.
 
+I built my solution using Maven.
+
 ### Tests
+There are 2 test classes. 
+* __BowlingScorerTest__
+Which tests that __BowlingScorer__ works as it should. This includes testing _calculateScore_ .<br>
+__The tests include testing for games with:__
+  * zero point in each roll
+  * one point in each roll
+  * only strikes
+  * only spares
+  * every other roll being 9 and 0
+  
+* __BowlingGameTest__
+Which tests that __BowlingGame__ works as it should. This include testing _rollOnce_ and _getScore_.<br>
 
 
 ### American ten-pin bowling rules
@@ -26,3 +40,8 @@ A single method is not much of a program, so I created the class __BowlingGame__
 * If he gets a spare or strike in the last (tenth) frame, the bowler gets to throw one or two more bonus balls, respectively. These bonus throws are taken as part of the same turn. If the bonus throws knock down all the pins, the process does not repeat: the bonus throws are only used to calculate the score of the final frame.
 * The game score is the total of all frame scores.
 <br>[More info on the rules at: How to Score for Bowling](https://www.topendsports.com/sport/tenpin/scoring.htm)
+
+
+### License
+[MIT](https://choosealicense.com/licenses/mit/=)
+
