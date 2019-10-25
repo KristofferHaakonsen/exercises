@@ -1,4 +1,5 @@
 # Bowling
+[This is the bowling-kata from Coding Dojo](http://codingdojo.org/kata/Bowling/)
 ### Problem Description 
 Create a program, which, given a valid sequence of rolls for one line of American Ten-Pin Bowling, produces the total score for the game. 
 
@@ -12,6 +13,7 @@ This challenge seems more like a single method than a program. I have therefor i
 
 A single method is not much of a program, so I created the class __BowlingGame__. This class stores the sequence of rolls for one line of American ten-pin bowling, which can be filled by using _rollOnce_. The method _getScore_ calls the method _calculateScore_ from __BowlingScorer__. The class __BowlingGame__ can easily be extended if that is desired.
 
+### Tests
 
 
 ### American ten-pin bowling rules
