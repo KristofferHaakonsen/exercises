@@ -14,7 +14,7 @@ A single method is not much of a program, so I created the class __BowlingGame__
 
 
 
-#### American ten-pin bowling rules
+### American ten-pin bowling rules
 
 * Each game, or “line” of bowling, includes ten turns, or “frames” for the bowler.
 * In each frame, the bowler gets up to two tries to knock down all the pins.
