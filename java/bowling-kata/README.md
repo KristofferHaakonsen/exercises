@@ -7,6 +7,13 @@ Create a program, which, given a valid sequence of rolls for one line of America
 * We will not check for correct number of rolls and frames.
 * We will not provide scores for intermediate frames.
 
+### My solution
+This challenge seems more like a single method than a program. I have therefor implemented all the functionality for calculating the score in a single method, _calculateScore_, in the class __BowlingScorer__. This makes the code easy to reuse, as I can simply import the class.
+
+A single method is not much of a program, so I created the class __BowlingGame__. This class stores the sequence of rolls for one line of American ten-pin bowling, which can be filled by using _rollOnce_. The method _getScore_ calls the method _calculateScore_ from __BowlingScorer__. The class __BowlingGame__ can easily be extended if that is desired.
+
+
+
 #### American ten-pin bowling rules
 
 * Each game, or “line” of bowling, includes ten turns, or “frames” for the bowler.
