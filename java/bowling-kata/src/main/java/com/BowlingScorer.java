@@ -5,12 +5,15 @@ package com;
  * */
 public class BowlingScorer {
 
+    private int[] listOfRolls = new int[21];
+    private int rolls = 0;
+
+
     /**
      * This method calculates the score for one line of American 10-pin bowling, given a valid sequence of rolls.
-     * @param result A valid sequence of rolls
      * @return the score for the sequence of rolls
      */
-    public int calculateScore(int[] result){
+    public int calculateScore(){
         //Keeps the accumulated score
         int score = 0;
 
@@ -20,22 +23,31 @@ public class BowlingScorer {
         //Iterate over the frames
         for(int i = 0; i < 10; i++){
             //Check if the frame is a strike
-            if(isStrike(result[currentRoll])){
-               score += 10 + result[currentRoll+1] + result[currentRoll+2];
+            if(isStrike(listOfRolls[currentRoll])){
+               score += 10 + listOfRolls[currentRoll+1] + listOfRolls[currentRoll+2];
                currentRoll++;
             }
             //Check if the frame is a strike
-            else if (isSpare(result[currentRoll], result[currentRoll+1])){
-                score += 10 + result[currentRoll+2];
+            else if (isSpare(listOfRolls[currentRoll], listOfRolls[currentRoll+1])){
+                score += 10 + listOfRolls[currentRoll+2];
                 currentRoll = currentRoll + 2;
             }
             //It is a normal frame
             else{
-                score += result[currentRoll] + result[currentRoll+1];
+                score += listOfRolls[currentRoll] + listOfRolls[currentRoll+1];
                 currentRoll = currentRoll + 2;
             }
         }
         return score;
+    }
+
+    /**
+     * This method stores a roll of bowling
+     * @param roll The amount of pins knocked down in this roll
+     */
+    public void rollOnce(int roll){
+        listOfRolls[rolls] = roll;
+        rolls++;
     }
 
 
