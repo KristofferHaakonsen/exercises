@@ -1,19 +1,15 @@
 package com;
 
 /**
- * This class contains a method for calculating the score for one round of bowling.
- * */
+ * This class contains methods used for calculating the score for American 10-pin bowling
+ */
 public class BowlingScorer {
-
-    private int[] listOfRolls = new int[21];
-    private int rolls = 0;
-
 
     /**
      * This method calculates the score for one line of American 10-pin bowling, given a valid sequence of rolls.
      * @return the score for the sequence of rolls
      */
-    public int calculateScore(){
+    public int calculateScore(int[] rolls ){
         //Keeps the accumulated score
         int score = 0;
 
@@ -23,31 +19,22 @@ public class BowlingScorer {
         //Iterate over the frames
         for(int i = 0; i < 10; i++){
             //Check if the frame is a strike
-            if(isStrike(listOfRolls[currentRoll])){
-               score += 10 + listOfRolls[currentRoll+1] + listOfRolls[currentRoll+2];
+            if(isStrike(rolls[currentRoll])){
+               score += 10 + rolls[currentRoll+1] + rolls[currentRoll+2];
                currentRoll++;
             }
             //Check if the frame is a strike
-            else if (isSpare(listOfRolls[currentRoll], listOfRolls[currentRoll+1])){
-                score += 10 + listOfRolls[currentRoll+2];
+            else if (isSpare(rolls[currentRoll], rolls[currentRoll+1])){
+                score += 10 + rolls[currentRoll+2];
                 currentRoll = currentRoll + 2;
             }
             //It is a normal frame
             else{
-                score += listOfRolls[currentRoll] + listOfRolls[currentRoll+1];
+                score += rolls[currentRoll] + rolls[currentRoll+1];
                 currentRoll = currentRoll + 2;
             }
         }
         return score;
-    }
-
-    /**
-     * This method stores a roll of bowling
-     * @param roll The amount of pins knocked down in this roll
-     */
-    public void rollOnce(int roll){
-        listOfRolls[rolls] = roll;
-        rolls++;
     }
 
 
